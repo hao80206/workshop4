@@ -1,0 +1,30 @@
+[
+  {
+    "email": "abc@com.au",
+    "pwd": "$2a$10$mYOYyrv0GshoPrEU8JlwpOBZH0K6T6rroysXfwBd4shZnrTX4IIIi",
+    "id": "1",
+    "username": "abc",
+    "avatar": ""
+  },
+  {
+    "email": "abd@com.au",
+    "pwd": "$2a$10$mYOYyrv0GshoPrEU8JlwpOBZH0K6T6rroysXfwBd4shZnrTX4IIIi",
+    "id": "2",
+    "username": "abd",
+    "avatar": ""
+  },
+  {
+    "email": "abe@com.au",
+    "pwd": "$2a$10$mYOYyrv0GshoPrEU8JlwpOBZH0K6T6rroysXfwBd4shZnrTX4IIIi",
+    "id": "3",
+    "username": "abe",
+    "avatar": ""
+  },
+  {
+    "id": 6,
+    "username": "jfghjf",
+    "email": "fghjfghj",
+    "pwd": "",
+    "avatar": ""
+  }
+]
