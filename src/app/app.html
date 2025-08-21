@@ -1,17 +1,33 @@
-<table>
-  <thead>
-    <tr>
-      <th>username </th>
-      <th>email </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of users; let i = index">
-      <tr>
-        <td>{{users.username}}</td>
-        <td>{{users.email}}</td>
-      </tr>
-  </tbody>
-</table>
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Workshop5</a>
 
-<router-outlet />
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <!-- Show Login if not logged in -->
+        <li class="nav-item" *ngIf="!isLoggedIn()">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+
+        <!-- Show Profile if logged in -->
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link" routerLink="/profile">Profile</a>
+        </li>
+
+        <!-- Logout button if logged in -->
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <button class="btn btn-outline-light ms-2" (click)="logOut()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Router Outlet -->
+<router-outlet></router-outlet>

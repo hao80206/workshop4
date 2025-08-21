@@ -14,5 +14,9 @@ export class HttpService {
   getUsers() {
     return this.httpService.get<User[]>(this.server + "/api/user");
   }
+
+  login(username: string, password: string) {
+    return this.httpService.post<any>(this.server + '/api/auth', { username, password });
+  }
   
 }

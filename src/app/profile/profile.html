@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center mt-5">
+    <form *ngIf="currentUser" (ngSubmit)="saveProfile()" class="p-4 border rounded shadow" style="width: 400px; background-color: #f8f9fa;">
+      <h2 class="text-center mb-4">User Profile</h2>
+  
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input 
+          id="username"
+          type="text" 
+          class="form-control" 
+          [(ngModel)]="currentUser.username" 
+          name="username" 
+          required
+        >
+      </div>
+  
+      <div class="mb-3">
+        <label for="birthdate" class="form-label">Birthdate</label>
+        <input 
+          id="birthdate"
+          type="date" 
+          class="form-control" 
+          [(ngModel)]="currentUser.birthdate" 
+          name="birthdate" 
+          required
+        >
+      </div>
+  
+      <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input 
+          id="age"
+          type="number" 
+          class="form-control" 
+          [(ngModel)]="currentUser.age" 
+          name="age" 
+          required
+        >
+      </div>
+  
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input 
+          id="email"
+          type="email" 
+          class="form-control" 
+          [(ngModel)]="currentUser.email" 
+          name="email" 
+          required
+        >
+      </div>
+  
+      <button type="submit" class="btn btn-success w-100" style="margin-bottom: 30px;">Save Profile</button>
+      <br>
+      <button class="btn btn-primary w-100" (click)="logOut()">LogOut</button>
+    </form>
+  </div>
+  
